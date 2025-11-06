@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">MusicPlay</string>
     <string name="profile">Profile</string>
-    <string name="login">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="remember_me">Remember me</string>
     <string name="ent_username">Enter Username</string>
     <string name="ent_pass">Password</string>
+    <string name="or">Or</string>
     <string name="fullname">Josuan Leonardo</string>
     <string name="nim">00000027571</string>
     <string name="kelas">Class BL</string>
