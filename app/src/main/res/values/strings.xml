@@ -1,15 +1,4 @@
 <resources>
-    <string name="app_name">MusicPlay</string>
-    <string name="profile">Profile</string>
-    <string name="sign_in">Sign In</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="email_hint">Email address</string>
-    <string name="password_hint">Password</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="remember_me">Remember me</string>
-    <string name="ent_username">Enter Username</string>
-    <string name="ent_pass">Password</string>
-    <string name="or">Or</string>
     <string name="fullname">Josuan Leonardo</string>
     <string name="nim">00000027571</string>
     <string name="kelas">Class BL</string>
@@ -22,10 +11,39 @@
     <string name="ref_utub6">https://www.youtube.com/watch?v=NM9RbDGl5C8</string>
     <string name="ref_utub7">https://www.youtube.com/watch?v=oh4YOj9VkVE&amp;t=316s</string>
     <string name="myprofile">My Profile Page</string>
-    <string name="loginfailed">Invalid Username or Password</string>
-    <string name="loginsucces">Login Successful</string>
     <string name="welcomemsg">Welcome, Josuan Leonardo 00000027571</string>
     <string name="oke">OKAY</string>
     <string name="playing">Now Playing</string>
     <string name="logout">Logout</string>
+
+    <!-- Success Messages -->
+    <string name="resource_created_successfully">%s created successfully!</string>
+
+    <!-- Error Messages -->
+    <string name="error_field_required">%s cannot be empty</string>
+    <string name="error_invalid_email">Invalid email format</string>
+    <string name="error_password_too_short">Password must be at least 8 characters</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+    <string name="error_saving_user_data">Error saving user data.</string>
+    <string name="resource_failed">%s failed.</string>
+    <string name="sign_in_failed">Invalid email or password</string>
+
+    <!-- Field Names -->
+    <string name="field_first_name">First name</string>
+    <string name="field_last_name">Last name</string>
+    <string name="field_email">Email</string>
+    <string name="field_password">Password</string>
+    <string name="field_confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="remember_me">Remember me</string>
+
+    <!-- Strings -->
+    <string name="authentication">Authentication</string>
+    <string name="account">Account</string>
+    <string name="app_name">MusicPlay</string>
+    <string name="app_logo">Music play logo</string>
+    <string name="profile">Profile</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">Or</string>
 </resources>
