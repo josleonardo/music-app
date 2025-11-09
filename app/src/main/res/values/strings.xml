@@ -42,8 +42,10 @@
     <string name="account">Account</string>
     <string name="app_name">MusicPlay</string>
     <string name="app_logo">Music play logo</string>
-    <string name="profile">Profile</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="or">Or</string>
+    <string name="home">Home</string>
+    <string name="playlist">Playlist</string>
+    <string name="profile">Profile</string>
 </resources>

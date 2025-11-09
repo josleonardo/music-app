@@ -1,35 +1,41 @@
 package umn.ac.id.musicplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnProfile, btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnProfile = findViewById(R.id.btnProfile);
-        btnLogin = findViewById(R.id.btnLogin);
+        NavigationBarView bottomNav = findViewById(R.id.bottomNavigationBar);
+        bottomNav.setOnItemSelectedListener(navListener);
 
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-            }
-        });
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
     }
+
+    private final NavigationBarView.OnItemSelectedListener navListener =
+            item -> {
+                Fragment selectedFragment = null;
+                int itemId = item.getItemId();
+                if (itemId == R.id.home) {
+                    selectedFragment = new HomeFragment();
+                } else if (itemId == R.id.playlist) {
+                    selectedFragment = new PlaylistFragment();
+                } else if (itemId == R.id.profile) {
+                    selectedFragment = new ProfileFragment();
+                }
+                if (selectedFragment != null) {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container, selectedFragment)
+                            .commit();
+                }
+                return true;
+            };
 }
