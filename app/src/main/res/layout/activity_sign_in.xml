@@ -9,18 +9,19 @@
     tools:context=".SignInActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/loginLayout"
-        android:layout_width="wrap_content"
+        android:id="@+id/lSignIn"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_max="320dp">
 
         <ImageView
-            android:id="@+id/appLogo"
+            android:id="@+id/ivAppLogo"
             android:layout_width="220dp"
             android:layout_height="72dp"
             android:contentDescription="@string/app_logo"
@@ -29,7 +30,7 @@
             app:srcCompat="@drawable/music_play_logo_flat" />
 
         <TextView
-            android:id="@+id/loginTitle"
+            android:id="@+id/tvSignInTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -38,58 +39,72 @@
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appLogo" />
-
-        <EditText
-            android:id="@+id/emailAddressEditText"
-            android:layout_width="318dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:autofillHints="emailAddress"
-            android:background="@drawable/custom_edit_text_1"
-            android:hint="@string/field_email"
-            android:inputType="textEmailAddress"
-            android:minHeight="56dp"
-            android:paddingHorizontal="16dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginTitle" />
+            app:layout_constraintTop_toBottomOf="@id/ivAppLogo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordField"
-            android:layout_width="318dp"
+            android:id="@+id/tfEmail"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textColorHint="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailAddressEditText"
+            app:layout_constraintTop_toBottomOf="@id/tvSignInTitle">
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/custom_edit_text_1"
+                android:hint="@string/field_email"
+                android:inputType="textEmailAddress"
+                android:minHeight="56dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/dark_red"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tfPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tfEmail"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/gray">
 
             <EditText
-                android:id="@+id/passwordEditText"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="password"
                 android:background="@drawable/custom_edit_text_1"
                 android:hint="@string/field_password"
                 android:inputType="textPassword"
-                android:textColor="@color/white" />
+                android:minHeight="56dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/dark_red" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <Button
-            android:id="@+id/signInButton"
-            android:layout_width="316dp"
+            android:id="@+id/bSignIn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:labelFor="@id/signInButton"
+            android:labelFor="@id/bSignIn"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -97,10 +112,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/passwordField" />
+            app:layout_constraintTop_toBottomOf="@id/tfPassword" />
 
         <TextView
-            android:id="@+id/or"
+            android:id="@+id/tvOr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -111,11 +126,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signInButton" />
+            app:layout_constraintTop_toBottomOf="@id/bSignIn" />
 
         <Button
-            android:id="@+id/signUpButton"
-            android:layout_width="316dp"
+            android:id="@+id/bSignUp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:backgroundTint="@color/gray"
@@ -126,10 +141,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/or" />
+            app:layout_constraintTop_toBottomOf="@id/tvOr" />
 
         <TextView
-            android:id="@+id/forgotPassword"
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -139,10 +154,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signUpButton" />
+            app:layout_constraintTop_toBottomOf="@id/bSignUp" />
 
         <CheckBox
-            android:id="@+id/checkRememberMe"
+            android:id="@+id/cbRememberMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -151,7 +166,7 @@
             android:textSize="16sp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

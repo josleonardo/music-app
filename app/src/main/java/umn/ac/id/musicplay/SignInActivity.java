@@ -24,10 +24,10 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        email = findViewById(R.id.emailAddressEditText);
-        password = findViewById(R.id.passwordEditText);
-        Button signIn = findViewById(R.id.signInButton);
-        Button signUp = findViewById(R.id.signUpButton);
+        email = findViewById(R.id.etEmail);
+        password = findViewById(R.id.etPassword);
+        Button signIn = findViewById(R.id.bSignIn);
+        Button signUp = findViewById(R.id.bSignUp);
         progressBar = findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
@@ -63,7 +63,7 @@ public class SignInActivity extends AppCompatActivity {
                             startActivity(new Intent(SignInActivity.this, MainActivity.class));
                             finish();
                         } else {
-                            Toast.makeText(SignInActivity.this, getString(R.string.sign_in_failed), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, getString(R.string.sign_in_failed), Toast.LENGTH_LONG).show();
                         }
                     });
         });

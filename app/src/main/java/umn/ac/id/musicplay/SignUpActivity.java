@@ -33,13 +33,13 @@ public class SignUpActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        firstName = findViewById(R.id.firstNameField);
-        lastName = findViewById(R.id.lastNameField);
-        email = findViewById(R.id.emailAddressField);
-        password = findViewById(R.id.passwordEditText);
-        confirmPassword = findViewById(R.id.confirmEditText);
-        Button signUp = findViewById(R.id.signUpButton);
-        Button signIn = findViewById(R.id.signInButton);
+        firstName = findViewById(R.id.etFirstName);
+        lastName = findViewById(R.id.etLastName);
+        email = findViewById(R.id.etEmail);
+        password = findViewById(R.id.etPassword);
+        confirmPassword = findViewById(R.id.etConfirmPassword);
+        Button signUp = findViewById(R.id.bSignUp);
+        Button signIn = findViewById(R.id.bSignIn);
         progressBar = findViewById(R.id.progressBar);
 
         signUp.setOnClickListener(view -> createAccount());
